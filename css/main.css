@@ -197,7 +197,7 @@ button.header-call {
   flex: 1 0 30%;
   min-width: 200px;
   
-  background-image: url(./image/first-block-image1.jpg);
+  background-image: url(../image/first-block-image1.jpg);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
