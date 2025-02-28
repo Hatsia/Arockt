@@ -656,7 +656,7 @@ button.header-call {
   height: 770px;
   max-height: 100%;
   background-size:cover;
-  background-image: url(/image/landmark-main-image.jpg);
+  background-image: url(./image/landmark-main-image.jpg);
   overflow: hidden;
   padding-top: 29px;
   padding-left: 30px;
