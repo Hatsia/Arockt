@@ -658,6 +658,7 @@ button.header-call {
   background-size:cover;
   overflow: hidden;
   padding-top: 29px;
+  background-image: url("../image/landmark-main-image.jpg");
   padding-left: 30px;
 }
 
