@@ -197,7 +197,7 @@ button.header-call {
   flex: 1 0 30%;
   min-width: 200px;
   
-  background-image: url("/image/first-block-image1.jpg");
+  background-image: url("./image/first-block-image1.jpg");
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -656,7 +656,7 @@ button.header-call {
   height: 770px;
   max-height: 100%;
   background-size:cover;
-  background-image: url(./image/landmark-main-image.jpg);
+  background-image: url("./image/landmark-main-image.jpg");
   overflow: hidden;
   padding-top: 29px;
   padding-left: 30px;
