@@ -837,3 +837,85 @@ button.header-call {
     max-height: 250px;
   }
 }
+
+/* ---- Updates ---- */
+.updates {
+  width: 100%;
+}
+.updates-container{
+  max-width: 1140px;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-areas: 
+  "A A B C"
+  "D D I I"
+  ;
+  grid-template-rows: auto auto;
+  gap: 30px;
+}
+
+.updates-item {
+  width: 100%;
+  max-width: 555px;
+  position: relative;
+}
+
+.updates-item:nth-child(1) {
+  grid-area: A;
+}
+.updates-item:nth-child(2) {
+  grid-area: B;
+}
+.updates-item:nth-child(3){
+  grid-area: C;
+}
+.updates-item:nth-child(4){
+  grid-area: D;
+}
+.updates-item:nth-child(5){
+  grid-area: I;
+}
+
+.updates-item img {
+  object-fit: cover;
+}
+
+.item-text-wrapper {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.item-company-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 5.7px;
+  color:#998675;
+}
+
+.item-date {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 5.7px;
+  color:#fff;
+}
