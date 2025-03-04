@@ -881,17 +881,29 @@ button.header-call {
 
 .updates-item:nth-child(1) {
   grid-area: A;
-  background-image: url("../image/updates-img1.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img1.png");
 }
 .updates-item:nth-child(2) {
   max-width: 263px;
   grid-area: B;
-  background-image: url("../image/updates-img2.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img2.png");
 }
 .updates-item:nth-child(3){
   max-width: 263px;
   grid-area: C;
-  background-image: url("../image/updates-img3.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img3.png");
 }
 .updates-item:nth-child(2) .item-company-name, 
 .updates-item:nth-child(3) .item-company-name {
@@ -899,16 +911,28 @@ button.header-call {
 }
 .updates-item:nth-child(4){
   grid-area: D;
-  background-image: url("../image/updates-img4.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img4.png");
 }
 .updates-item:nth-child(5){
   grid-area: I;
-  background-image: url("../image/updates-img5.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img5.png");
 }
 
 .updates-item img {
   object-fit: cover;
-  background-image: url("../image/updates-img6.png");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(1, 1, 1, 0.48)
+    ), url("../image/updates-img6.png");
 }
 
 .item-text-wrapper {
@@ -977,4 +1001,176 @@ button.header-call {
     "I";
     gap: 5px;
   }
+}
+
+/* ---- Footer ---- */
+footer {
+  width: 100%;
+}
+.stay-in-touch {
+  width: 100%;
+  /* Delete */
+  height: 642px;
+  background-image: url(../image/stay-in-touch-background.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stay-in-touch-block {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(10px);
+
+  border-radius: 30px;
+  padding: 65px;
+}
+
+.stay-in-touch-block h2 {
+  display: inline-block;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 55px;
+  color: #fff;
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.stay-in-touch-text {
+  display: inline-block;
+  max-width: 545px;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+  
+  margin-bottom: 43px;
+}
+
+.stay-in-touch .privacy {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.input-field {
+  height: 70px;
+  width: 100%;
+  max-width: 745px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+input.email {
+  position: absolute;
+  display: block; 
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  padding: 24px 0px 24px 24px;
+}
+.inner-text {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #777;
+  font-weight: 500;
+  padding: 24px;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+input.email:focus ~ .inner-text,
+input.email:valid ~ .inner-text{
+  transform: translateY(-24px);
+}
+.button:before,
+.button:after {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  z-index: 1;
+  width: 146px;
+  height: 50px;
+  border-radius: 6px;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 15px;
+  color: #fff;
+
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+}
+.button:before {
+  content: 'Subscribe';
+  background: #998675;
+}
+.button:after {
+  content: 'Seccessful';
+  background: #998675;
+}
+
+input.email:focus ~ .button:before,
+input.email:valid ~ .button:before{
+  opacity: 1;
+  pointer-events: auto;
+}
+input.email:invalid ~ .button:before{
+  pointer-events: none;
+}
+input.email:valid ~ .button:before{
+  background: #998675;
+}
+
+#check {
+  display: none;
+}
+#check:checked ~ button::before {
+  display: none;
+}
+#check:checked ~ button::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ button::after {
+  overflow: visible;
+  width: 100%;
 }
