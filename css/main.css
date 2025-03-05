@@ -1028,7 +1028,7 @@ footer {
   align-items: center;
 
   background: rgba(17, 24, 39, 0.4);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
 
   border-radius: 30px;
   padding: 65px;
@@ -1116,12 +1116,12 @@ input.email:focus ~ .inner-text,
 input.email:valid ~ .inner-text{
   transform: translateY(-24px);
 }
-.button:before,
-.button:after {
+.button::before,
+.button::after {
   position: absolute;
   top: 10px;
   right: 24px;
-  z-index: 1;
+  z-index: 2;
   width: 146px;
   height: 50px;
   border-radius: 6px;
@@ -1137,40 +1137,47 @@ input.email:valid ~ .inner-text{
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  transition: .5s;
+  transition: .3s;
 }
-.button:before {
+.button::before {
   content: 'Subscribe';
   background: #998675;
 }
-.button:after {
+.button::after {
   content: 'Seccessful';
+  overflow: hidden;
   background: #998675;
 }
 
-input.email:focus ~ .button:before,
-input.email:valid ~ .button:before{
+
+input.email:focus ~ .button::before,
+input.email:valid ~ .button::before{
   opacity: 1;
   pointer-events: auto;
 }
-input.email:invalid ~ .button:before{
+input.email:invalid ~ .button::before{
   pointer-events: none;
 }
-input.email:valid ~ .button:before{
+input.email:valid ~ .button::before{
   background: #998675;
 }
 
 #check {
   display: none;
 }
-#check:checked ~ button::before {
+#check:checked ~ .button::before {
   display: none;
 }
-#check:checked ~ button::after {
-  opacity: 1;
+#check:checked ~ .button::after {
+  opacity: 2;
   pointer-events: auto;
 }
-#check:checked ~ button::after {
-  overflow: visible;
+#check:checked ~ .button::after {
+  top: 0;
+  right: 0;
+  height: 100%;
+  align-content: center;
+  padding: 0;
+  font-size: 20px;
   width: 100%;
 }
