@@ -1093,7 +1093,7 @@ input.email {
   border-radius: 12px;
   border: none;
   outline: none;
-  padding: 24px 0px 24px 24px;
+  padding: 24px 24px 24px 24px;
 }
 .inner-text {
   position: absolute;
@@ -1193,5 +1193,37 @@ input.email:valid ~ .button::before{
   width: 100%;
 }
 @media (max-width: 585px) {
+  .stay-in-touch-block{
+    padding: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .input-field{
+    height: 160px;
+  }
+  .button::after,
+  .button::before {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 40%);
+  }
+  #check:checked ~ .button::after {
+    transform: translate(0%, 0%);
+  }
   
+  input.email {
+    text-align: center;
+  }
+  .inner-text{
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input.email:focus ~ .inner-text,
+  input.email:not( :placeholder-shown) ~ .inner-text{
+    transform: translate(-50%, -85px);
+  }
 }
