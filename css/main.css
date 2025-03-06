@@ -1109,13 +1109,24 @@ input.email {
   font-weight: 500;
   padding: 24px;
   pointer-events: none;
+  transform-origin: 0 0;
   transition: all .4s;
 }
 
 input.email:focus ~ .inner-text,
-input.email:valid ~ .inner-text{
+input.email:not( :placeholder-shown) ~ .inner-text{
   transform: translateY(-24px);
 }
+
+input.email:not(:placeholder-shown):invalid {
+  border: 2px solid #ff4444;
+  background: #fff8f8;
+}
+
+input.email:not(:placeholder-shown):invalid ~ .inner-text {
+  color: #ff4444;
+}
+
 .button::before,
 .button::after {
   position: absolute;
@@ -1169,7 +1180,7 @@ input.email:valid ~ .button::before{
   display: none;
 }
 #check:checked ~ .button::after {
-  opacity: 2;
+  opacity: 1;
   pointer-events: auto;
 }
 #check:checked ~ .button::after {
@@ -1180,4 +1191,7 @@ input.email:valid ~ .button::before{
   padding: 0;
   font-size: 20px;
   width: 100%;
+}
+@media (max-width: 585px) {
+  
 }
