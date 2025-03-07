@@ -58,6 +58,17 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 360px) {
+  .header-information{
+    justify-content: center;
+    gap: 10px
+  }
+  button.header-call {
+
+  }
+}
+
+
 .header-interaction {
   display: flex;
   gap: 40px;
@@ -128,6 +139,7 @@ button.header-call {
   position: absolute;
   transform: translate(-115px, -10px);
   z-index: 5;
+  width: 100%;
 }
 
 .welcome-text {
@@ -196,7 +208,6 @@ button.header-call {
 
 .welcome-rightcolumn {
   flex: 1 0 30%;
-  min-width: 200px;
   
   background-image: url("../image/first-block-image1.jpg");
   background-size: cover; 
@@ -288,7 +299,7 @@ button.header-call {
 /* ----- Collection block ----- */
 .collection {
   width: 100%;
-  padding: 91px 0px;
+  padding: 91px 10px;
 
   background: linear-gradient(
     to bottom,
@@ -298,7 +309,7 @@ button.header-call {
 
 .collection-container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 0 auto;
 
   display: flex;
@@ -309,9 +320,6 @@ button.header-call {
 
 .collection-leftcolumn {
   flex: 1 1 48%;
-  min-width: 360px;
-  min-height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,7 +391,6 @@ button.header-call {
 
 .collection-rightcolumn {
   flex: 1 1 52%;
-  min-width: 540px;
   align-self: flex-start;
   height: 450px;
 }
@@ -450,12 +457,6 @@ button.header-call {
 }
 
 @media (max-width: 1030px) {
-  .image-stack {
-    padding-left: 10%;
-  }
-}
-
-@media (max-width: 590px) {
   .collection-rightcolumn {
     display: none; 
   }
@@ -612,6 +613,7 @@ button.header-call {
   line-height: 21px;
   color: #777;
 }
+
 @media (max-width: 1000px) {
   .about-item:nth-child(3){
    padding-top: 40px; 
@@ -620,6 +622,22 @@ button.header-call {
 @media (max-width: 638px) {
   .about-item:nth-child(2) {
     padding-top: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .about-item:nth-child(1) {
+    align-items: center;
+    gap: 50px;
+  }
+
+  .figure-container{
+    flex-direction: column;
+  }
+
+  .rotated-caption {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    width: 100%;
   }
 }
 
@@ -643,13 +661,11 @@ button.header-call {
 
 .landmark-item {
   flex: 1 1 300px;
-  min-width: 150px;
   max-width: fit-content;
 }
 
 .landmark-item:nth-child(1) {
   flex: 1 1 500px;
-  min-width: 400px;
   max-width: 710px;
   height: 770px;
   max-height: 100%;
