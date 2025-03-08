@@ -117,7 +117,6 @@ button.header-call {
 }
 
 .welcome-container{
-  padding-top: 80px;
   height: auto;
   max-width: 1512px;
   margin: 0 auto;
@@ -299,6 +298,11 @@ button.header-call {
   }
   .welcome-share-block {
     left: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .welcome{
+    padding-top: 50px;
   }
 }
 
