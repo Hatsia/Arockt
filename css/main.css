@@ -63,9 +63,6 @@
     justify-content: center;
     gap: 10px
   }
-  button.header-call {
-
-  }
 }
 
 
@@ -102,6 +99,13 @@ button.header-call {
   background-color: #998675;
   border-radius: 6px;
   text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent
+}
+
+button.header-call:hover {
+  border-color: #fff;
+  border-width: 2px;
 }
 
 @media (max-width: 800px) {
@@ -137,7 +141,7 @@ button.header-call {
 .welcome-leftcolumn-background {
   position: absolute;
   transform: translate(-115px, -10px);
-  z-index: 5;
+  z-index: 0;
   width: 100%;
 }
 
@@ -203,6 +207,13 @@ button.header-call {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
+  transition: all 0.3s ease;
+  border: 2px solid transparent; 
+}
+
+.welcome-button:hover {
+  border-color: #fff;
+  border-width: 2px;
 }
 
 .welcome-rightcolumn {
@@ -397,6 +408,13 @@ button.header-call {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.collection-button:hover {
+  border-color: black;
+  border-width: 2px;
 }
 
 .collection-rightcolumn {
@@ -612,6 +630,16 @@ button.header-call {
   background-color: transparent;
   border: 0.5px solid rgb(255, 255, 255);;
   border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.about-button:hover {
+  color: black;
+  background-color: #fff;
+  border-color: black;
+  border-width: 2px;
 }
 
 .about-text {
@@ -821,7 +849,15 @@ button.header-call {
   align-items: center;
   flex-direction: row;
   gap: 5px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent; 
 }
+
+.landmark-button:hover{
+  border-color: #fff;
+  border-width: 2px;
+}
+
 .landmark-button span {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
